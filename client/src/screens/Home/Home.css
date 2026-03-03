@@ -52,6 +52,9 @@
   max-width: 1600px;
 
 }
+.home .section-2 {
+  position: relative;
+}
 .home .section-2 .banner {
   font-family: var(--display-font);
   font-weight: 700;
@@ -117,13 +120,14 @@
   line-height: 1em;
 }
 
-.home .section-3 p {
+.home .section-3 p, .home .section-4 p {
   text-align: center;
   width: min(100%, 55rem);
   line-height: 1.2em;
   font-size: 1.4rem;
   font-weight: 100;
   padding-top: 2rem;
+  opacity: 0.8;
 }
 
 .home .section-4 {

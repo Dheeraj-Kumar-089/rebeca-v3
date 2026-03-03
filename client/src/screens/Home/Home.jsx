@@ -1,8 +1,6 @@
 import "./Home.css";
 import Heading from "../../components/Headingv2/Headingv2";
-import ArtistCard from "../../components/ArtistCard/ArtistCard";
 import ArtistList from "../../components/ArtistList/ArtistList";
-import Nightbanner from "../../components/Nightbanner/Nightbanner";
 import CollageHeart from "../../components/CollageHeart/CollageHeart";
 import Hero from "../../components/ScrollFancy/Hero";
 import CountDown from "../../components/CountDown/CountDown";
@@ -52,6 +50,9 @@ const Home = () => {
             </section>
             <section className="section-4 ">
                 <Heading title={"ARTISTS"} />
+                <p>
+                    Honoring the visionary creators and legendary performers whose timeless artistry paved the way for the vibrant, evolving culture we celebrate today.
+                </p>
                 <ArtistList artists={artists} />
             </section>
             <section className="section-5" style={{marginTop: "8rem"}}>

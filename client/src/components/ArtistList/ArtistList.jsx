@@ -13,7 +13,7 @@ const ArtistList = ({ artists = [] }) => {
       style={{
         position: "relative",
         width: "100vw",
-        height: "50vh",
+        height: "70vh",
         backgroundColor: "transparent",
         marginLeft: "calc(-50vw + 50%)",
         overflow: "hidden",
@@ -51,8 +51,8 @@ const ArtistList = ({ artists = [] }) => {
             style={{
               position: "relative",
               flexShrink: 0, 
-              width: "clamp(200px, 25vw, 350px)",
-              height: "35vh",
+              width: "clamp(400px, 25vw, 650px)",
+              height: "50vh",
               overflow: "visible",
               backgroundColor: "transparent",
               transform: index % 2 !== 0 ? "translateY(5vh)" : "none",
