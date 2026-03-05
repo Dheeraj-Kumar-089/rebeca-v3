@@ -6,6 +6,7 @@ exports.createReg = catchAsync(async (req, res, next) => {
     console.log("Register Creation");
     try {
         const regData = req.body;
+        console.log(req.body)
         const creation = await Register.create(regData);
         res.status(200).json({
             status: "success",
@@ -40,15 +41,10 @@ exports.getAllUserRegs = catchAsync(async (req, res, next) => {
     console.log("Fetching all registrations for user...");
 
     try {
-        const { id } = req.params;
+        console.log(req.user)
+        const { id } = req.user;
+        console.log("Id in a string: ", id)
         const regs = await Register.find({ userId: id }).sort({ createdAt: -1 });
-
-        if (!regs || regs.length === 0) {
-            return res.status(404).json({
-                status: "fail",
-                message: "No registrations found for this user.",
-            });
-        }
 
         res.status(200).json({
             status: "success",

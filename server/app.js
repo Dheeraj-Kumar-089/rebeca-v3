@@ -11,7 +11,7 @@ const cookieParser = require("cookie-parser");
 const router = require("./routes/routes");
 const authRouter = require("./routes/authRoutes");
 const userRouter = require("./routes/userRoutes");
-const regRouter = require("./routes/registerRoutes")
+const regRouter = require("./routes/registerRoutes");
 const AppError = require("./utils/appError");
 
 const app = express();
@@ -21,7 +21,7 @@ dotenv.config({ path: "./.env" }); // <- connecting the enviroment variables
 // GLOBAL MIDDLEWARE SETUP
 
 // Trust proxy and logging
-app.set('trust proxy', 1);
+app.set("trust proxy", 1);
 
 // SECURITY & CORS MIDDLEWARE
 const ADMIN_URL = process.env.ADMIN_URL;
