@@ -3,6 +3,7 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const uploadToCloudinary = require("../utils/cloudinary").uploadToCloudinary;
 const deleteFromCloudinary = require("../utils/cloudinary").deleteFromCloudinary;
+const sendEmail = require("../utils/email");
 
 exports.createUser = catchAsync(async (userData) => {
     const user = await User.create({
@@ -42,6 +43,10 @@ exports.updateUser = catchAsync(async (req, res, next) => {
         if (!updation) {
             return next(new AppError("No user found with that ID", 404));
         }
+
+        await sendEmail('account-update', req.body.email, {
+        name: req.body.name
+        });
 
         res.status(200).json({
             status: "success",

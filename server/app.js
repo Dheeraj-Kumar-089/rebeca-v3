@@ -11,7 +11,7 @@ const cookieParser = require("cookie-parser");
 const router = require("./routes/routes");
 const authRouter = require("./routes/authRoutes");
 const userRouter = require("./routes/userRoutes");
-const eventRouter = require("./routes/eventRoutes");
+const regRouter = require("./routes/registerRoutes");
 const AppError = require("./utils/appError");
 
 const app = express();
@@ -21,12 +21,13 @@ dotenv.config({ path: "./.env" }); // <- connecting the enviroment variables
 // GLOBAL MIDDLEWARE SETUP
 
 // Trust proxy and logging
-app.set('trust proxy', 1);
+app.set("trust proxy", 1);
 
 // SECURITY & CORS MIDDLEWARE
 const ADMIN_URL = process.env.ADMIN_URL;
 const SERV_URL = process.env.SERV_URL;
-const allowedOrigins = [ADMIN_URL, SERV_URL];
+const CLIENT_URL = process.env.CLIENT_URL;
+const allowedOrigins = [ADMIN_URL, SERV_URL, CLIENT_URL];
 const corsOptions = {
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {
@@ -86,8 +87,8 @@ app.use(compression());
 // ROUTES
 app.use("/api/v3/", router); // <- Calling the router
 app.use("/api/v3/auth", authRouter); // <- Auth routes
-app.use("/api/v3/user", userRouter); // <- Admin routes
-app.use("/api/v3/events", eventRouter); // <- Event routes
+app.use("/api/v3/user", userRouter); // <- User routes
+app.use("/api/v3/evregister", regRouter); // <- Event Register routes
 
 // ERROR HANDLING MIDDLEWARE
 // Handle non-existing routes
