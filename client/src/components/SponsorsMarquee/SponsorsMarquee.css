@@ -2,7 +2,6 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    /* Fades the edges to match your exact --app-background */
     mask-image: linear-gradient(
         to right,
         transparent,
@@ -23,11 +22,6 @@
 .marquee-track {
     display: flex;
     width: max-content;
-    animation: Scroll 40s linear infinite;
-}
-
-.marquee-container:hover .marquee-track {
-    animation-play-state: paused;
 }
 
 .logo-group {
@@ -37,28 +31,15 @@
     padding-right: 5rem;
 }
 
-@keyframes Scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
 .sponsor-logo {
-    height: 70px;
+    /* Height removed, controlled by props now! */
     width: auto;
     max-width: 180px;
     object-fit: contain;
 
-    /* The Grayscale to Color Magic */
     filter: grayscale(100%) opacity(50%);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Gives a slight "spring" effect */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
-
-    /* If your logos have white backgrounds, uncomment the line below to blend them */
-    /* mix-blend-mode: screen; */
 }
 
 .sponsor-logo:hover {

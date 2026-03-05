@@ -51,12 +51,15 @@ const Schedule = () => {
       {/* Content Area with Dynamic Background Image */}
       <div className="content-viewport">
         <div className="vignette-wrapper">
-          <img 
-            src={scheduleData[activeTab].image} 
-            alt={`Schedule Day ${scheduleData[activeTab].day}`} 
-            className="background-mask-img" 
-            loading="lazy"
-          />
+          {scheduleData.map((item, index) => (
+            <img 
+              key={index}
+              src={item.image} 
+              alt={`Schedule Day ${item.day}`} 
+              className={`background-mask-img ${index === activeTab ? 'active' : ''}`} 
+              loading="lazy"
+            />
+          ))}
           <div className="text-overlay">
             <p>{scheduleData[activeTab].desc}</p>
             {/* <div className="button-wrapper">

@@ -39,7 +39,9 @@
     font-size: 1.5rem;
     color: #ffffff89;
 }
-
+.sponsors2 .intro {
+    height: 100vh;
+}
 .sponsors2 .intro .backdrop {
     position: absolute;
     z-index: -1;
@@ -49,7 +51,7 @@
 }
 
 .sponsors2 .intro .backdrop img {
-    height: 500px;
+    height: 80vh;
 }
 
 

@@ -1,26 +1,97 @@
-import React from 'react';
-import './SponsorsMarquee.css';
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import "./SponsorsMarquee.css";
 
-// Pass 'sponsorsList' in as a prop here
-const SponsorsMarquee = ({ sponsorsList }) => {
-  return (
-    <div className="marquee-container">
-      <div className="marquee-track">
-        
-        {/* First set of logos */}
-        <div className="logo-group">
-          {[...sponsorsList, ...sponsorsList].map((sponsor, index) => (
-            <img 
-              key={`set1-${index}`} 
-              src={`/assets/imgs/sponsorship/${sponsor.imgname}.webp`} /* Adjust this path based on how your JSON formats the image name */
-              alt={sponsor.imgname.split('/')[2] || "idk"} 
-              className="sponsor-logo" 
-            />
-          ))}
+gsap.registerPlugin(ScrollTrigger);
+
+const DynamicMarquee = ({
+    items = [],
+    logoHeight = "90px",
+    direction = "left",
+    autoscroll = false,
+    scrollDistance = 2500,
+}) => {
+    const containerRef = useRef(null);
+    const trackRef = useRef(null);
+
+    // 1. Create a ref to store our auto-scroll animation
+    const tweenRef = useRef(null);
+
+    useGSAP(
+        () => {
+            const track = trackRef.current;
+
+            if (autoscroll) {
+                const startPercent = direction === "left" ? 0 : -33.33;
+                const endPercent = direction === "left" ? -33.33 : 0;
+
+                tweenRef.current = gsap.fromTo(
+                    track,
+                    { xPercent: startPercent },
+                    {
+                        xPercent: endPercent,
+                        ease: "none",
+                        repeat: -1,
+                        duration: 25,
+                    },
+                );
+            } else {
+                const movePixels = direction === "left" ? -scrollDistance : scrollDistance;
+
+                gsap.set(track, { x: 0, xPercent: direction === "right" ? -15 : 0 });
+
+                gsap.to(track, {
+                    x: movePixels,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: document.documentElement,
+                        start: "top top",
+                        end: "bottom bottom",
+                        scrub: 1,
+                    },
+                });
+            }
+        },
+        { scope: containerRef, dependencies: [direction, autoscroll, scrollDistance, items.length] },
+    );
+
+    // 3. Create mouse handlers to pause/play the tween
+    const handleMouseEnter = () => {
+        if (autoscroll && tweenRef.current) {
+            tweenRef.current.pause();
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (autoscroll && tweenRef.current) {
+            tweenRef.current.play();
+        }
+    };
+
+    return (
+        <div
+            className="marquee-container"
+            ref={containerRef}
+            onMouseEnter={handleMouseEnter} // 4. Attach handlers here
+            onMouseLeave={handleMouseLeave}
+        >
+            <div className="marquee-track" ref={trackRef}>
+                <div className="logo-group">
+                    {[...items, ...items, ...items].map((sponsor, index) => (
+                        <img
+                            key={`sponsor-${index}`}
+                            src={`/assets/imgs/sponsorship/${sponsor.imgname}.webp`}
+                            alt={sponsor.imgname?.split("/")[2] || "Sponsor Logo"}
+                            className="sponsor-logo"
+                            style={{ height: logoHeight }}
+                        />
+                    ))}
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default SponsorsMarquee;
+export default DynamicMarquee;

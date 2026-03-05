@@ -46,7 +46,7 @@ const CompletedContent = () => {
             <CardContent style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
                 <CheckCircle color="success" sx={{ width: "6rem", height: "6rem" }} />
                 <Typography variant="h5">Congratulations!</Typography>
-                <Typography variant="body1" color="grey" sx={{ mb: 2 }}>
+                <Typography variant="body1" color="grey" sx={{ mb: 2, textAlign: 'center' }}>
                     Your registration has been received. The registration will be viewed by the event coordinators shortly.
                 </Typography>
                 <Button onClick={() => navigate("/events")} variant="contained">Go to Events</Button>

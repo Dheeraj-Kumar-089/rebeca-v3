@@ -7,7 +7,6 @@ import spdata from "../../assets/data/pastSponsors.json";
 import SponsorsMarquee from "../../components/SponsorsMarquee/SponsorsMarquee";
 import SponsorsCategory from "../../components/SponsorCat/SponsorCat";
 
-
 const Sponsors2 = () => {
     return (
         <section className="sponsors2">
@@ -15,18 +14,34 @@ const Sponsors2 = () => {
                 <h1>Partner with the Legacy of REBECA</h1>
                 <p>
                     For 80+ years, REBECA has been the bridge between the glorious past and the innovative future. It is
-                    four days of absolute ecstasy, where the nostalgia of one of the country’s most profound alumni
+                    four days of absolute ecstasy, where the nostalgia of one of the country's most profound alumni
                     bases meets the vibrant energy of today's brightest engineering minds.
                 </p>
-                <Button innerText={"Download Brochure"} onClick={()=>window.open("https://drive.google.com/file/d/1CcQnU8Ym7DINlCEpHgcso7H9nc8QuuEi/view?usp=sharing", "_blank")} />
+                <Button
+                    innerText={"Download Brochure"}
+                    onClick={() =>
+                        window.open(
+                            "https://drive.google.com/file/d/1CcQnU8Ym7DINlCEpHgcso7H9nc8QuuEi/view?usp=sharing",
+                            "_blank",
+                        )
+                    }
+                />
                 <div className="backdrop">
                     <img src="/assets/imgs/sponsorship/backdrop-start.png" />
                 </div>
             </section>
             <section>
                 <h2>Past Sponsors</h2>
-                <SponsorsMarquee sponsorsList={spdata}/>
-                <SponsorsMarquee sponsorsList={spdata}/>
+                <SponsorsMarquee items={spdata.slice(0, 12)} direction="left" />
+
+                {/* Items 10-18 */}
+                <SponsorsMarquee items={spdata.slice(8, 18)} direction="right" />
+
+                {/* Items 19-26 */}
+                <SponsorsMarquee items={spdata.slice(15, 26)} direction="left" />
+
+                {/* Items 27-34 */}
+                <SponsorsMarquee items={spdata.slice(22, 34)} direction="right" />
             </section>
             <section className="college">
                 <h1>Lets start with a little about our College</h1>

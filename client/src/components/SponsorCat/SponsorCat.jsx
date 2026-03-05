@@ -9,36 +9,32 @@ import DiamondIcon from "@mui/icons-material/Diamond";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 const tiers = [
-    { id: 1, name: "BECA SPONSOR", amount: "2.5 LAKH", icon: <ChangeHistoryIcon />, focusColor: "#fbc02d" }, // Green
-    { id: 2, name: "ASSOCIATE SPONSOR", amount: "5.0 LAKH", icon: <WidgetsIcon />, focusColor: "#4caf50" }, // Yellow/Gold
-    { id: 3, name: "CO-SPONSOR", amount: "8.0 LAKH", icon: <AllInclusiveIcon />, focusColor: "#e91e63" }, // Pink
-    { id: 4, name: "TITLE SPONSOR", amount: "10 LAKH", icon: <DiamondIcon />, focusColor: "#1a8fe3" }, // Blue
+    { id: 1, name: "BECA SPONSOR", amount: "19 LAKH", icon: <ChangeHistoryIcon />, focusColor: "#fbc02d" }, // Green
+    { id: 2, name: "ASSOCIATE SPONSOR", amount: "16 LAKH", icon: <WidgetsIcon />, focusColor: "#4caf50" }, // Yellow/Gold
+    { id: 3, name: "CO-SPONSOR", amount: "13 LAKH", icon: <AllInclusiveIcon />, focusColor: "#e91e63" }, // Pink
+    { id: 4, name: "TITLE SPONSOR", amount: "6 LAKH", icon: <DiamondIcon />, focusColor: "#1a8fe3" }, // Blue
 ];
 
 const perksData = {
     1: [
-        "Logo on standard event banners",
-        "Shared social media mentions",
-        "Basic 3x3 stall space allocated",
-        "Standard certificate",
+        "Logo on main stage, posters, digital",
+        "Title sponsor at opening and closing ceremonies",
+        "Dedicated space for product showcasing",
     ],
     2: [
-        "Logo on main stage side-panels",
-        "Dedicated individual social media post",
-        "Premium stall space",
-        "Passes for 5 reps",
+        "Logo on banners and select digital platforms",
+        "On stage mention as associate sponsor",
+        "Brand representation at selected materials",
     ],
     3: [
-        "Prominent campus logo placement",
-        "Video ad playback between artist sets",
-        "Prime stall location",
-        "VIP seating for 10 guests",
+        "Logo on posters and digital channels",
+        "Verbal acknowledgement during event segments",
+        "Shared area for engagement activities",
     ],
     4: [
-        "Co-branded title: 'REBECA Presented By [Brand]'",
-        "Maximum global visibility",
-        "On-stage felicitation",
-        "Exclusive prime lounge access",
+        "Logo on cover and within the magazine",
+        "Title sponsor on all promotion materials",
+        "Opportunity for branding articles and content",
     ],
 };
 
