@@ -26,7 +26,8 @@ app.set("trust proxy", 1);
 // SECURITY & CORS MIDDLEWARE
 const ADMIN_URL = process.env.ADMIN_URL;
 const SERV_URL = process.env.SERV_URL;
-const allowedOrigins = [ADMIN_URL, SERV_URL];
+const CLIENT_URL = process.env.CLIENT_URL;
+const allowedOrigins = [ADMIN_URL, SERV_URL, CLIENT_URL];
 const corsOptions = {
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {
