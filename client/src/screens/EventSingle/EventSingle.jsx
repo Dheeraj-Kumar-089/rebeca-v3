@@ -86,8 +86,8 @@ const EventSingle = () => {
                             {oneEvent?.type !== 'performance' && <ButtonGroup variant="contained" size="large">
                                 {userRegs.includes(eventSlug) ? (
                                     <Button startIcon={<CheckCircleRounded />} color="success">
-                                    Registered
-                                </Button>
+                                        Registered
+                                    </Button>
                                 ) : (
                                     <Button startIcon={<Person2Rounded />} onClick={() => navigate("register")}>
                                         Register
@@ -171,7 +171,7 @@ const EventSingle = () => {
                 {/* Content Below */}
                 <div className="event-single-content">
                     <p className="event-single-description">{oneEvent.desc}</p>
-                    {oneEvent.rounds.length && <h2 className="schedule-title">Schedule</h2>}
+                    {oneEvent.rounds.length > 0 && <h2 className="schedule-title">Schedule</h2>}
 
                     <div className="prelims-container">
                         {oneEvent?.rounds?.map((round, i) => {
@@ -183,7 +183,7 @@ const EventSingle = () => {
                                     venue={round.venue}
                                     key={i}
                                     i={i}
-                                    hideHeading={!oneEvent?.rulesDocURL}
+                                    hideHeading={!oneEvent?.rulesdoc}
                                 />
                             );
                         })}

@@ -5,8 +5,8 @@ export default function RoundCard({ name, start, end, venue, i, hideHeading }) {
     return (
         <div className="round-card">
             <Box variant="outlined" sx={{ position: "relative", zIndex: 1 }}>
-                {/* {!hideHeading && ( */}
-                    {(
+                {!hideHeading && (
+                    
                     <Paper
                         sx={{
                             p: 1,

@@ -3,12 +3,14 @@
     "name": "Inaugration",
     "desc": "ReBECA will be inaugurated by professors",
     "slug": "inaugration",
+    "type": "performance",
     "registration": "https://example.com/register",
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
     "startTime": "2026-03-19T17:00:00",
+    "rounds": [],
     "coords": [],
     "prizemoney": {}
   },
@@ -719,6 +721,7 @@
     "slug": "main-artist-performance",
     "type": "performance",
     "registration": "https://example.com/register",
+    "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -745,7 +748,8 @@
         "email": "",
         "phone": "+91 86498 09402"
       }
-    ]
+    ],
+    "prizemoney": {}
   },
   {
     "name": "DJ Night",
@@ -753,6 +757,7 @@
     "slug": "dj-night",
     "type": "performance",
     "registration": "https://example.com/register",
+    "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -779,7 +784,8 @@
         "email": "",
         "phone": "+91 86498 09402"
       }
-    ]
+    ],
+    "prizemoney": {}
   },
   {
     "name": "Solo Synergy + Sync Showcase",
@@ -1048,6 +1054,7 @@
     "slug": "dj-night-performance",
     "type": "performance",
     "registration": "https://example.com/register",
+    "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://placehold.co/600x400.jpg",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -1063,6 +1070,7 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": []
+    "coords": [],
+    "prizemoney": {}
   }
 ]
