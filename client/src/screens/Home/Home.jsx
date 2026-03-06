@@ -21,7 +21,7 @@ const artists = [
     { name: "Jannat Sufi Band", img: "JannatSufiBand.png" },
     { name: "MD Irfan", img: "mdirfan.png" },
     { name: "M Sonic", img: "MSonic.png" },
-    { name: "Pata", img: "pata.png" },
+    { name: "Pota", img: "pata.png" },
     { name: "Pritam Roy", img: "pritamroy.png" },
     { name: "Prithbi", img: "prithbi.png" },
     { name: "Senjuti Das", img: "SenjutiDas.png" }
