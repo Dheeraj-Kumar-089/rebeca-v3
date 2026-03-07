@@ -603,7 +603,7 @@
     "desc": "A knockout-style street dance battle for teams of 4 to 8 dancers, featuring styles like Hip-Hop, Popping, and B-Boying.",
     "slug": "footloose",
     "type": "team",
-    "minTeamSize": 1,
+    "minTeamSize": 4,
     "maxTeamSize": 8,
     "registration": "https://example.com/register",
     "regfee": 400,

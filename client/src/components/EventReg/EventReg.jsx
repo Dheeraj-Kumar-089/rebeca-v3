@@ -46,10 +46,13 @@ const CompletedContent = () => {
             <CardContent style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
                 <CheckCircle color="success" sx={{ width: "6rem", height: "6rem" }} />
                 <Typography variant="h5">Congratulations!</Typography>
-                <Typography variant="body1" color="grey" sx={{ mb: 2, textAlign: 'center' }}>
-                    Your registration has been received. The registration will be viewed by the event coordinators shortly.
+                <Typography variant="body1" color="grey" sx={{ mb: 2, textAlign: "center" }}>
+                    Your registration has been received. The registration will be viewed by the event coordinators
+                    shortly.
                 </Typography>
-                <Button onClick={() => navigate("/events")} variant="contained">Go to Events</Button>
+                <Button onClick={() => navigate("/events")} variant="contained">
+                    Go to Events
+                </Button>
             </CardContent>
         </Card>
     );
@@ -100,8 +103,8 @@ export default function EventRegister() {
     const [isreg, setIsreg] = useState(false);
     const [errors, setErrors] = useState({});
     const curEvent = allEvents.filter((ev) => ev.slug === eventSlug)[0];
-    const takePay = (curEvent?.regfee !== 0) && (!user?.email.endsWith("iiests.ac.in"));
-    const canMoveForward = user && (user.phone && user.dept && user.college && user.passout_year);
+    const takePay = curEvent?.regfee !== 0 && !user?.email.endsWith("iiests.ac.in");
+    const canMoveForward = user && user.phone && user.dept && user.college && user.passout_year;
 
     const [formData, setFormData] = useState({
         userId: user?._id,
@@ -125,7 +128,6 @@ export default function EventRegister() {
     // --- HANDLERS ---
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        console.log(name, value, e.target);
         setFormData((prev) => ({ ...prev, [name]: value }));
         if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
     };
@@ -159,45 +161,59 @@ export default function EventRegister() {
 
     const validate = () => {
         let tempErrors = {};
-        
-        // 1. Team Name Validation (only if it's a team event)
-        if (curEvent?.type === "team" && !formData.teamName.trim()) {
-            tempErrors.teamName = "Team Name is required";
-        }
-    
-        // 2. Asset Link Validation
-        // Logic: Only validate if curEvent.asset exists (is not empty/null)
-        if (curEvent?.asset && !formData.assetUpload.trim()) {
-            tempErrors.assetUpload = "Asset link is required for this event";
-        }
-    
-        // 3. Team Members & Phone Validation
-        // 3.1 Team member length validation
-        var teamLen = formData.teamMem.length;
-        if(teamLen === 0) teamLen++; // To denote user is the lone member
-        if (teamLen < curEvent.minTeamSize || teamLen > curEvent.maxTeamSize) {
-            tempErrors.teamMem = `Team Members must be within ${curEvent.minTeamSize} and ${curEvent.maxTeamSize}`
-        }
-        // 3.2 Indian phone regex: starts with 6-9 and has 10 digits total
-        const phoneRegex = /^[6-9]\d{9}$/;
-    
-        formData.teamMem.forEach((m, i) => {
-            // Name check
-            if (!m.name.trim()) {
-                tempErrors[`name_${i}`] = "Required";
+        // Regex for a standard URL
+        const urlRegex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+        // Specific regex for Google Drive (optional, but matches your labels)
+        const driveRegex = /(drive|docs)\.google\.com/;
+
+        // --- STEP 1 VALIDATIONS ---
+        if (activeStep === 1) {
+            if (curEvent?.type === "team" && !formData.teamName.trim()) {
+                tempErrors.teamName = "Team Name is required";
             }
-            
-            // Phone check
-            const phone = m.phone.trim();
-            if (!phone) {
-                tempErrors[`phone_${i}`] = "Required";
-            } else if (!phoneRegex.test(phone)) {
-                tempErrors[`phone_${i}`] = "Invalid 10-digit number";
+
+            if (curEvent?.asset) {
+                const assetLink = formData.assetUpload.trim();
+                if (!assetLink) {
+                    tempErrors.assetUpload = "Asset link is required";
+                } else if (!urlRegex.test(assetLink)) {
+                    tempErrors.assetUpload = "Please enter a valid URL";
+                } else if (!driveRegex.test(assetLink)) {
+                    tempErrors.assetUpload = "Please provide a valid Google Drive link";
+                }
             }
-        });
-    
+
+            // Team Size & Members
+            const teamLen = formData.teamMem.length + 1;
+            if (curEvent?.type === "team" && (teamLen < curEvent.minTeamSize || teamLen > curEvent.maxTeamSize)) {
+                tempErrors.teamMem = `Team must be between ${curEvent.minTeamSize} and ${curEvent.maxTeamSize} members`;
+            }
+
+            const phoneRegex = /^[6-9]\d{9}$/;
+            formData.teamMem.forEach((m, i) => {
+                if (!m.name.trim()) tempErrors[`name_${i}`] = "Required";
+                if (!m.phone.trim()) {
+                    tempErrors[`phone_${i}`] = "Required";
+                } else if (!phoneRegex.test(m.phone.trim())) {
+                    tempErrors[`phone_${i}`] = "Invalid phone number";
+                }
+            });
+        }
+
+        // --- STEP 2 VALIDATIONS ---
+        if (activeStep === 2 && takePay) {
+            const payLink = formData.paymentSS.trim();
+            if (!payLink) {
+                tempErrors.paymentSS = "Payment screenshot link is required";
+            } else if (!urlRegex.test(payLink)) {
+                tempErrors.paymentSS = "Please enter a valid URL";
+            } else if (!driveRegex.test(payLink)) {
+                tempErrors.paymentSS = "Please provide a valid Google Drive link";
+            }
+        }
+
         setErrors(tempErrors);
-        return !!!Object.keys(tempErrors).some((e) => tempErrors[e].length > 0)
+        return Object.keys(tempErrors).length === 0;
     };
 
     const handleNext = async () => {
@@ -205,27 +221,29 @@ export default function EventRegister() {
             showNotification("Please update your profile details first.", "error");
             return;
         }
-        validate()
-        console.log("total errors: ", errors)
+        // Run validation for the current step
+        if (!validate()) {
+            showNotification("Please fix the errors before proceeding.", "error");
+            return;
+        }
         // Step 1 -> 2 Validation
         if (curEvent.type === "team" && activeStep === 1 && !validate()) {
             Object.entries(errors).forEach(([key, value]) => {
-                showNotification(`${key}: ${value}`, 'error');
-              });
+                showNotification(`${key}: ${value}`, "error");
+            });
             // showNotification(errors, 'error')
-            return
+            return;
         }
 
         // Step 2 -> 3 (Final Submission)
         if (activeStep === 2) {
             setIsreg(true);
             try {
-                console.log("Submitting Data:", formData);
                 // Simulate an API call
                 const res = await createReg(formData);
                 setActiveStep(3);
                 showNotification(`Successfully Registered`, "success");
-                handleAllUserRegs()
+                handleAllUserRegs();
             } catch (err) {
                 console.error("Registration failed", err);
                 showNotification(`Err: ${err.message}`, "error");
@@ -241,9 +259,7 @@ export default function EventRegister() {
 
     // Guard Clause for Logged Out Users
     if (!user) {
-        return (
-            <NoUserLoggedIn />
-        );
+        return <NoUserLoggedIn />;
     }
 
     if (userRegs?.includes(eventSlug)) {
@@ -255,12 +271,15 @@ export default function EventRegister() {
     }
 
     if (!allEvents.map((e) => e.slug).includes(eventSlug)) {
-        return <NoSuchEvent />
+        return <NoSuchEvent />;
     }
 
     return (
         <Box sx={{ maxWidth: 650, mx: "auto", p: 2, pt: 12 }}>
-            <Paper elevation={4} sx={{ p: { xs: 2, md: 4 }, borderRadius: 3 }}>
+            <Paper
+                elevation={4}
+                sx={{ p: { xs: 2, md: 4 }, borderRadius: 3, minHeight: 500, display: "flex", flexDirection: "column" }}
+            >
                 <Stepper activeStep={activeStep} alternativeLabel sx={{ mb: 4 }}>
                     {steps.map((label) => (
                         <Step key={label}>
@@ -279,12 +298,14 @@ export default function EventRegister() {
                         {!canMoveForward && (
                             <Alert severity="warning" sx={{ mt: 2, mb: 2 }}>
                                 <AlertTitle>Incomplete Profile</AlertTitle>
-                                Please complete your profile details (Phone, Department, College, Passout Year) to proceed with registration.
+                                Please complete your profile details (Phone, Department, College, Passout Year) to
+                                proceed with registration.
                             </Alert>
                         )}
                         <Stack spacing={2} sx={{ mt: 2 }}>
                             <TextField fullWidth label="Your Name" value={user?.name || "User"} disabled />
                             <TextField fullWidth label="Registered Email" value={user?.email || ""} disabled />
+                            <TextField fullWidth label="Contact details" value={user?.phone || ""} disabled />
                             <Typography variant="caption" color="text.secondary">
                                 * To change these, please go to{" "}
                                 <Link
@@ -354,6 +375,9 @@ export default function EventRegister() {
                         {curEvent.asset && (
                             <>
                                 <Typography variant="body1">{curEvent.asset || "Upload"}</Typography>
+                                <Typography variant="caption">
+                                    Make sure to set the access to 'anyone with the link'
+                                </Typography>
                                 <TextField
                                     fullWidth
                                     label="Assets Link (Google Drive)"
@@ -371,8 +395,8 @@ export default function EventRegister() {
                         {!curEvent.asset && curEvent.type !== "team" && (
                             <Alert color="secondary">
                                 <AlertTitle>Team & Asset details is not required</AlertTitle>
-                                All the data we need is pre-filled, event doesn't require team registrations or Asset uploads. Click on
-                                next to complete payment (if required)
+                                All the data we need is pre-filled, event doesn't require team registrations or Asset
+                                uploads. Click on next to complete payment (if required)
                             </Alert>
                         )}
                     </Box>
@@ -390,11 +414,17 @@ export default function EventRegister() {
                                 <img
                                     src={`/assets/payment-qr.webp`}
                                     alt="QR"
-                                    style={{ borderRadius: "8px", border: "1px solid #eee", marginBottom: "2rem", width: "100%" }}
+                                    style={{
+                                        borderRadius: "8px",
+                                        border: "1px solid #eee",
+                                        marginBottom: "2rem",
+                                        width: "100%",
+                                    }}
                                 />
+
                                 <TextField
                                     fullWidth
-                                    label="Payment ScreenShot (Google Drive)"
+                                    label="Payment ScreenShot (Google Drive Link)"
                                     name="paymentSS"
                                     value={formData.paymentSS}
                                     onChange={handleInputChange}
@@ -402,6 +432,9 @@ export default function EventRegister() {
                                     helperText={errors.paymentSS}
                                     sx={{ mb: 4 }}
                                 />
+                                <Typography variant="caption" color="warning">
+                                    Make sure to set the access to 'anyone with the link'
+                                </Typography>
                             </>
                         ) : (
                             <Alert color="secondary">
@@ -429,7 +462,7 @@ export default function EventRegister() {
                 )}
 
                 {/* --- NAVIGATION --- */}
-                <Box sx={{ display: "flex", justifyContent: "space-between", mt: 4 }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "end", flexGrow: 1 }}>
                     <Button disabled={activeStep === 0 || activeStep === 3 || isreg} onClick={handleBack}>
                         Back
                     </Button>
