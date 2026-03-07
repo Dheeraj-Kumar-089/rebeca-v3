@@ -83,6 +83,10 @@ h1 {
     padding: 1rem;
 }
 
+.MuiAlert-root {
+    color: #fff !important;
+}
+
 ::-webkit-scrollbar-track {
     /* height: 5px !important; */
     padding: 1rem;
