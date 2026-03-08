@@ -30,60 +30,56 @@ const Footer2 = () => {
                 <div className="right-col">
                     <div className="title">Contacts</div>
                     <div className="contacts">
-                        <div className="contact">
-                            <div className="name">Dr. Sekhar Mandal
+                        <div className="contact-column">
+                            <div className="contact">
+                                <div className="name">Dr. Sekhar Mandal</div>
+                                <div className="ph-num">Chairman</div>
                             </div>
-
-                            <div className="ph-num">Chairman</div>
-                        </div>
-                        <div className="contact">
-                            <div className="name">Dr. Rajib Chakraborty</div>
-
-                            <div className="ph-num">Joint Convenor</div>
-                        </div>
-                        <div className="contact">
-                            <div className="name">Dr. Dipankana Bhattacherjee</div>
-
-                            <div className="ph-num">Joint Convenor</div>
-                        </div>
-                        <div className="contact">
-                            <div className="name">Dr. Ujjal Bhattacherjee</div>
-
-                            <div className="ph-num">Treasurer</div>
-                        </div>
-                        <div className="contact">
-                            <div className="name">Niloy Mondal</div>
-
-                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
-                                <span className="material-icons">phone</span>+91-70475-71174
+                            <div className="contact">
+                                <div className="name">Dr. Rajib Chakraborty</div>
+                                <div className="ph-num">Joint Convenor</div>
+                            </div>
+                            <div className="contact">
+                                <div className="name">Dr. Dipankana Bhattacherjee</div>
+                                <div className="ph-num">Joint Convenor</div>
+                            </div>
+                            <div className="contact">
+                                <div className="name">Dr. Ujjal Bhattacherjee</div>
+                                <div className="ph-num">Treasurer</div>
                             </div>
                         </div>
-                        <div className="contact">
-                            <div className="name">Dipu Shaw</div>
-
-                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
-                                <span className="material-icons">phone</span>+91-76992-59827
+                        <div className="contact-column">
+                            <div className="contact">
+                                <div className="name">Niloy Mondal</div>
+                                <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                    <span className="material-icons">phone</span>+91-70475-71174
+                                </div>
+                            </div>
+                            <div className="contact">
+                                <div className="name">Aniket C. Nimje</div>
+                                <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                    <span className="material-icons">phone</span>+91-86687-98948
+                                </div>
+                            </div>
+                            <div className="contact">
+                                <div className="name">Dipu Shaw</div>
+                                <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                    <span className="material-icons">phone</span>+91-76992-59827
+                                </div>
                             </div>
                         </div>
-                        <div className="contact">
-                            <div className="name">Aniket C. Nimje</div>
-
-                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
-                                <span className="material-icons">phone</span>+91-86687-98948
+                        <div className="contact-column">
+                            <div className="contact">
+                                <div className="name">Rohan Vikas Kudtudkar</div>
+                                <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                    <span className="material-icons">phone</span>+91-93212-34023 
+                                </div>
                             </div>
-                        </div>
-                        <div className="contact">
-                            <div className="name">Rohan Vikas Kudtudkar</div>
-
-                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
-                                <span className="material-icons">phone</span>+91-93212-34023 
-                            </div>
-                        </div>
-                        <div className="contact">
-                            <div className="name">Shubhayu Sarkar</div>
-
-                            <div className="ph-num" style={{whiteSpace: "nowrap"}}>
-                                <span className="material-icons">phone</span>+91-93192-00435
+                            <div className="contact">
+                                <div className="name">Shubhayu Sarkar</div>
+                                <div className="ph-num" style={{whiteSpace: "nowrap"}}>
+                                    <span className="material-icons">phone</span>+91-93192-00435
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -95,6 +95,11 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+.footer2 .right-col .contacts .contact-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .footer2 .right-col .contacts .contact {
     width: 17ch;
 }
