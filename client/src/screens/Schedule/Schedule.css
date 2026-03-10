@@ -31,8 +31,6 @@
 .schedule-pg-bg {
     position: sticky;
     top: 0;
-    left: -50%;
-    transform: translateX(50%);
     z-index: 0;
     width: 100%;
 }
@@ -40,6 +38,8 @@
 .schedule-pg-bg img {
     width: max(900px, 100%);
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Content on top of the hero image */
