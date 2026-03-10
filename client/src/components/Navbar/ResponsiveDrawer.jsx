@@ -100,7 +100,7 @@ const RespDrawer = ({ open, onClose }) => {
                         </ListItem>
                     ))}
                 </Box>
-                <ListItem
+                {/* <ListItem
                     sx={{
                         display: "flex",
                         justifyContent: "center",
@@ -130,7 +130,7 @@ const RespDrawer = ({ open, onClose }) => {
                     >
                         Join as Volunteer
                     </Button>
-                </ListItem>
+                </ListItem> */}
             </List>
         </Drawer>
     );
