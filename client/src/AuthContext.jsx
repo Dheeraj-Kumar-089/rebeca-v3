@@ -60,9 +60,15 @@ export const AuthProvider = ({ children }) => {
     const [allEvents, setAllEvents] = useState([]);
     const [allEventsByDay, setAllEventsByDay] = useState({ saptami: [], ashtami: [], navami: [], dashami: [] });
     const [allTeams, setAllTeams] = useState([]);
-    const [teamsData, setTeamsData] = useState({});
     const { Notification, showNotification } = useNotification();
     const [userRegs, setUserRegs] = useState([]);
+    const [preloadedImages, setPreloadedImages] = useState([]);
+    const [isAssetsLoaded, setIsAssetsLoaded] = useState(false);
+
+    const updateHeroAssets = (images) => {
+        setPreloadedImages(images);
+        setIsAssetsLoaded(true);
+    };
 
     const handlesetEventsByDay = (e) => {
         const grouped = {
@@ -191,6 +197,9 @@ export const AuthProvider = ({ children }) => {
                 allEventsByDay,
                 userRegs,
                 handleAllUserRegs,
+                preloadedImages,
+                isAssetsLoaded,
+                updateHeroAssets
             }}
         >
             <Notification />
