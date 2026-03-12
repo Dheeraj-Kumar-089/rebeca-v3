@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
     Container, Typography, Box, CircularProgress,
     Card, CardContent, Chip, Divider, IconButton,
@@ -7,8 +8,10 @@ import RefreshIcon from "@mui/icons-material/Refresh";
 import GroupsIcon from "@mui/icons-material/Groups";
 import PersonIcon from "@mui/icons-material/Person";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { useAuth } from "../../AuthContext"; 
+import { useAuth } from "../../AuthContext";
 import "./myRegistrations.css";
+
+const COOLDOWN_SECONDS = 20;
 
 const formatEventName = (slug) => {
     if (!slug) return "Unknown Event";
@@ -22,7 +25,6 @@ const formatDate = (dateString) =>
 
 const RegistrationCard = ({ reg, allEvents }) => {
     const isTeam = reg.teamMem?.length > 0;
-
     const eventDetails = allEvents.find((e) => e.slug === reg.event);
     const requiresPayment = eventDetails && eventDetails.regfee > 0;
 
@@ -70,7 +72,6 @@ const RegistrationCard = ({ reg, allEvents }) => {
                 {/* Payment & Asset Section */}
                 <Divider sx={{ my: 1.5 }} />
                 <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
-
                     {requiresPayment && reg.paymentSS && reg.paymentSS.trim() !== "" && (
                         <Box>
                             <Typography variant="caption" color="text.secondary" sx={{ display: "block", mb: 0.5 }}>
@@ -87,7 +88,6 @@ const RegistrationCard = ({ reg, allEvents }) => {
                             />
                         </Box>
                     )}
-
                     {reg.assetUpload && reg.assetUpload.trim() !== "" && (
                         <Box>
                             <Typography variant="caption" color="text.secondary" sx={{ display: "block", mb: 0.5 }}>
@@ -112,6 +112,33 @@ const RegistrationCard = ({ reg, allEvents }) => {
 
 const MyRegistrations = () => {
     const { userRegs, handleAllUserRegs, userLoad, allEvents } = useAuth();
+    const [cooldown, setCooldown] = useState(0);
+
+    // On mount — restore cooldown from localStorage if still active
+    useEffect(() => {
+        const lastRefresh = localStorage.getItem("regs_last_refresh");
+        if (lastRefresh) {
+            const elapsed = Math.floor((Date.now() - parseInt(lastRefresh)) / 1000);
+            const remaining = COOLDOWN_SECONDS - elapsed;
+            if (remaining > 0) setCooldown(remaining);
+        }
+    }, []);
+
+    // Tick countdown down every second
+    useEffect(() => {
+        if (cooldown <= 0) return;
+        const timer = setTimeout(() => setCooldown((prev) => prev - 1), 1000);
+        return () => clearTimeout(timer);
+    }, [cooldown]);
+
+    const handleRefresh = () => {
+        if (cooldown > 0 || userLoad) return;
+        handleAllUserRegs();
+        localStorage.setItem("regs_last_refresh", Date.now().toString());
+        setCooldown(COOLDOWN_SECONDS);
+    };
+
+    const isOnCooldown = cooldown > 0;
 
     return (
         <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
@@ -144,10 +171,21 @@ const MyRegistrations = () => {
                         {userRegs.length} registration{userRegs.length !== 1 ? "s" : ""}
                     </Typography>
                 )}
-                <Tooltip title="Refresh">
-                    <IconButton onClick={handleAllUserRegs} disabled={userLoad}>
-                        <RefreshIcon />
-                    </IconButton>
+                <Tooltip title={isOnCooldown ? `Refresh after ${cooldown}s` : "Refresh"}>
+                    <span>
+                        <IconButton
+                            onClick={handleRefresh}
+                            disabled={isOnCooldown || userLoad}
+                        >
+                            {isOnCooldown ? (
+                                <Typography variant="caption" fontWeight={600} sx={{ fontSize: "0.7rem", minWidth: 28 }}>
+                                    {cooldown}s
+                                </Typography>
+                            ) : (
+                                <RefreshIcon />
+                            )}
+                        </IconButton>
+                    </span>
                 </Tooltip>
             </Box>
 

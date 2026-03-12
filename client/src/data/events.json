@@ -140,7 +140,7 @@
     "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/moviescreening.webp",
     "asset": "",
     "startTime": "2026-03-19T01:00:00",
     "rounds": [
@@ -216,7 +216,7 @@
     "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/debate.webp",
     "asset": "",
     "startTime": "2026-03-20T11:00:00",
     "rounds": [
@@ -255,7 +255,7 @@
     "regfee": 0,
     "poster": "/posters/dumb_charades_league.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/dumb_chards.webp",
     "asset": "",
     "startTime": "2026-03-20T14:00:00",
     "rounds": [
@@ -302,7 +302,7 @@
     "regfee": 100,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/mono_act.webp",
     "asset": "",
     "startTime": "2026-03-20T16:00:00",
     "rounds": [
@@ -450,7 +450,7 @@
     "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/dj_night.webp",
     "asset": "",
     "startTime": "2026-03-20T01:00:00",
     "rounds": [
@@ -503,7 +503,7 @@
     "regfee": 150,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/rangmanch.webp",
     "asset": "",
     "startTime": "2026-03-21T14:00:00",
     "rounds": [
@@ -542,7 +542,7 @@
     "regfee": 300,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/footloose.webp",
     "asset": "",
     "startTime": "2026-03-21T16:00:00",
     "rounds": [
@@ -581,7 +581,7 @@
     "regfee": 699,
     "poster": "/posters/rockbuzz.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/rockbuzz.webp",
     "asset": true,
     "startTime": "2026-03-21T18:00:00",
     "rounds": [
@@ -709,7 +709,7 @@
     "regfee": 100,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/solo_synergy.webp",
     "asset": "",
     "startTime": "2026-03-22T11:00:00",
     "rounds": [
@@ -756,7 +756,7 @@
     "regfee": 200,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/sync_showcase.webp",
     "asset": "",
     "startTime": "2026-03-22T11:00:00",
     "rounds": [
@@ -795,7 +795,7 @@
     "regfee": 50,
     "poster": "/posters/verse_wars.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/versewars.webp",
     "asset": "",
     "startTime": "2026-03-22T14:00:00",
     "rounds": [
@@ -833,7 +833,7 @@
     "regfee": 100,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/rebequiz.webp",
     "asset": "",
     "startTime": "2026-03-22T14:00:00",
     "rounds": [
@@ -871,7 +871,7 @@
     "regfee": 0,
     "poster": "https://placehold.co/600x400.jpg",
     "rulesdoc": "",
-    "thumbnail": "https://placehold.co/150x150.jpg",
+    "thumbnail": "/assets/imgs/thumbnails/fiducia.webp",
     "asset": "",
     "startTime": "2026-03-22T18:00:00",
     "rounds": [
