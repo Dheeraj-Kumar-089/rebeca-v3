@@ -95,6 +95,42 @@ const NoSuchEvent = () => {
     );
 };
 
+/**
+ * Safely checks if a given string is a valid Google Drive or Docs link.
+ * * @param {string} input - The URL string entered by the user.
+ * @returns {boolean} - True if it's a valid Google Drive/Docs link, false otherwise.
+ */
+function isValidGoogleDriveLink(input) {
+  // 1. Immediately reject empty or non-string inputs
+  if (!input || typeof input !== 'string') {
+    return false;
+  }
+
+  try {
+    // 2. Parse the URL natively. 
+    // If the input is not a valid URL (e.g., "hello world"), this throws an error.
+    const parsedUrl = new URL(input);
+
+    // 3. Enforce HTTPS (Google Drive always uses secure connections)
+    if (parsedUrl.protocol !== 'https:') {
+      return false;
+    }
+
+    // 4. Strictly define the allowed hostnames
+    const allowedHosts = [
+      'drive.google.com', 
+      'docs.google.com'
+    ];
+
+    // 5. Check if the parsed hostname perfectly matches our allowed list
+    return allowedHosts.includes(parsedUrl.hostname);
+
+  } catch (error) {
+    // Catching the error means the input was completely malformed
+    return false;
+  }
+}
+
 export default function EventRegister() {
     const navigate = useNavigate();
     const { user, allEvents, userRegs, handleAllUserRegs, showNotification } = useAuth();
@@ -162,9 +198,9 @@ export default function EventRegister() {
     const validate = () => {
         let tempErrors = {};
         // Regex for a standard URL
-        const urlRegex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
+        // const urlRegex = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
         // Specific regex for Google Drive (optional, but matches your labels)
-        const driveRegex = /(drive|docs)\.google\.com/;
+        // const driveRegex = /(drive|docs)\.google\.com/;
 
         // --- STEP 1 VALIDATIONS ---
         if (activeStep === 1) {
@@ -176,10 +212,8 @@ export default function EventRegister() {
                 const assetLink = formData.assetUpload.trim();
                 if (!assetLink) {
                     tempErrors.assetUpload = "Asset link is required";
-                } else if (!urlRegex.test(assetLink)) {
-                    tempErrors.assetUpload = "Please enter a valid URL";
-                } else if (!driveRegex.test(assetLink)) {
-                    tempErrors.assetUpload = "Please provide a valid Google Drive link";
+                } else if (!isValidGoogleDriveLink(assetLink)) {
+                    tempErrors.assetUpload = "Please enter a valid Google Drive link";
                 }
             }
 
@@ -196,7 +230,7 @@ export default function EventRegister() {
                     tempErrors[`phone_${i}`] = "Required";
                 } else if (!phoneRegex.test(m.phone.trim())) {
                     tempErrors[`phone_${i}`] = "Invalid phone number";
-                }
+                } 
             });
         }
 
@@ -205,10 +239,8 @@ export default function EventRegister() {
             const payLink = formData.paymentSS.trim();
             if (!payLink) {
                 tempErrors.paymentSS = "Payment screenshot link is required";
-            } else if (!urlRegex.test(payLink)) {
-                tempErrors.paymentSS = "Please enter a valid URL";
-            } else if (!driveRegex.test(payLink)) {
-                tempErrors.paymentSS = "Please provide a valid Google Drive link";
+            } else if (!isValidGoogleDriveLink(payLink)) {
+                tempErrors.paymentSS = "Please enter a valid Google Drive link";
             }
         }
 
