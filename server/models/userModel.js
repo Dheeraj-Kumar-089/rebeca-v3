@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
         },
         image: {
             type: String,
-            required: [true, "Missing Field: image"],
+            required: false,
             trim: true
         },
         email: {

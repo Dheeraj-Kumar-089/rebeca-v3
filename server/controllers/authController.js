@@ -58,6 +58,9 @@ exports.googleAuth = catchAsync(async (req, res, next) => {
     let statusCode = 200;
 
     if (!user) {
+        if (!picture) {
+            console.log("[BUGFIX]: Privacy settings disallowed image transfer")
+        }
         const newUser = await createUser({
             name: name,
             email: email,
