@@ -55,7 +55,7 @@ const Home = () => {
                 <p>
                     Honoring the visionary creators and legendary performers whose timeless artistry paved the way for the vibrant, evolving culture we celebrate today.
                 </p>
-                <ArtistList artists={artists} />
+                {/* <ArtistList artists={artists} /> */}
             </section>
             <section className="section-5" style={{marginTop: "8rem"}}>
                 <Heading title={"SCHEDULE"} />
