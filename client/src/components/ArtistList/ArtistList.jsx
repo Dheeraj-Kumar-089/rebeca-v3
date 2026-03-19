@@ -85,19 +85,19 @@ const ArtistList = ({ artists = [] }) => {
         >
             <Box ref={leftColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1, mt: -5 }}>
                 {columns[0].map((artist, index) => (
-                    <ArtistCard key={`col1-${index}`} name={artist?.name} img={artist?.img} />
+                    <ArtistCard key={`col1-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
             </Box>
 
             <Box ref={middleColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1, mt: 25 }}>
                 {columns[1].map((artist, index) => (
-                    <ArtistCard key={`col2-${index}`} name={artist?.name} img={artist?.img} />
+                    <ArtistCard key={`col2-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
             </Box>
 
             <Box ref={rightColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1, mt: -5 }}>
                 {columns[2].map((artist, index) => (
-                    <ArtistCard key={`col3-${index}`} name={artist?.name} img={artist?.img} />
+                    <ArtistCard key={`col3-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
             </Box>
         </Box>

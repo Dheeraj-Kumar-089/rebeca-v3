@@ -8,24 +8,18 @@ import Schedule from "../Schedule_new/Schedule"
 import { Typography } from "@mui/material";
 
 const artists = [
-    { name: "Amit Mishra", img: "AmitMishra.png" },
-    { name: "Anupam Roy Band", img: "AnupamRoyBand.png" },
-    { name: "Anurag Halder", img: "anuraghalder.png" },
-    { name: "Arunashish Roy", img: "ArunashishRoy.png" },
-    { name: "Ash King", img: "ashking.png" },
-    { name: "Avoid Rafa", img: "avoidrafa.png" },
-    { name: "Distorted Chromosomes", img: "destortedchromosomes.png" },
-    { name: "DJ Neelashree", img: "djneelashree.png" },
-    { name: "DJ Raxo", img: "djraxo.png" },
-    { name: "DJ Roop", img: "djroop.png" },
-    { name: "Fakir Band", img: "FakirBand.png" },
-    { name: "Jannat Sufi Band", img: "JannatSufiBand.png" },
-    // { name: "MD Irfan", img: "mdirfan.png" },
-    // { name: "M Sonic", img: "MSonic.png" },
-    // { name: "Pota", img: "pata.png" },
-    // { name: "Pritam Roy", img: "pritamroy.png" },
-    // { name: "Prithbi", img: "prithbi.png" },
-    // { name: "Senjuti Das", img: "SenjutiDas.png" }
+    { day: 1, name: "Sushmita Patra", img: "sushmita_patra" },
+    { day: 1, name: "Pt. Tarun Bhattacharya", img: "pt_tarun_bhattacharya" },
+    { day: 1, name: "Ankita Bhattacharya", img: "ankita_bhattacharya" },
+    { day: 1, name: "Nilanjan Ghoshal", img: "nilanjan_ghoshal" },
+    { day: 2, name: "Somlata and the Aces", img: "somlata" },
+    { day: 2, name: "The Folk Diaryz", img: "the_folk_diaryz" },
+    { day: 2, name: "Kunal Grover", img: "kunal_grover" },
+    { day: 3, name: "Anurag Halder", img: "anurag_halder" },
+    { day: 3, name: "Fakira", img: "fakira" },
+    { day: 3, name: "Prithibi", img: "prithibi" },
+    { day: 4, name: "Nakash Aziz", img: "nakash_aziz" },
+    { day: 4, name: "Ehsaas India", img: "ehsaas_india" }
 ]
 
 const Home = () => {
