@@ -20,12 +20,12 @@ const artists = [
     { name: "DJ Roop", img: "djroop.png" },
     { name: "Fakir Band", img: "FakirBand.png" },
     { name: "Jannat Sufi Band", img: "JannatSufiBand.png" },
-    { name: "MD Irfan", img: "mdirfan.png" },
-    { name: "M Sonic", img: "MSonic.png" },
-    { name: "Pota", img: "pata.png" },
-    { name: "Pritam Roy", img: "pritamroy.png" },
-    { name: "Prithbi", img: "prithbi.png" },
-    { name: "Senjuti Das", img: "SenjutiDas.png" }
+    // { name: "MD Irfan", img: "mdirfan.png" },
+    // { name: "M Sonic", img: "MSonic.png" },
+    // { name: "Pota", img: "pata.png" },
+    // { name: "Pritam Roy", img: "pritamroy.png" },
+    // { name: "Prithbi", img: "prithbi.png" },
+    // { name: "Senjuti Das", img: "SenjutiDas.png" }
 ]
 
 const Home = () => {
@@ -55,7 +55,7 @@ const Home = () => {
                 <p>
                     Honoring the visionary creators and legendary performers whose timeless artistry paved the way for the vibrant, evolving culture we celebrate today.
                 </p>
-                {/* <ArtistList artists={artists} /> */}
+                <ArtistList artists={artists} />
             </section>
             <section className="section-5" style={{marginTop: "8rem"}}>
                 <Heading title={"SCHEDULE"} />
