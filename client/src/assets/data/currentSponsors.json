@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Exclusive Beverage Partner",
+        "name": "Cococola",
+        "imgname": "SponsorsImg/CocaCola"
+    },
+    {
+        "id": 2,
+        "title": "Merchandise Partner",
+        "name": "Cemindia",
+        "imgname": "SponsorsImg/cemindia"
+    },
+    {
+        "id": 3,
+        "title": "Event Partner",
+        "name": "Iocl",
+        "imgname": "SponsorsImg/IOCL"
+    },
+    {
+        "id": 4,
+        "title": "Style Partner",
+        "name": "Yousta",
+        "imgname": "sponsorsImages/yousta"
+    },
+    {
+        "id": 5,
+        "title": "Beauty Partner",
+        "name": "Lakme Academy",
+        "imgname": "SponsorsImg/LAKME"
+    },
+    {
+        "id": 6,
+        "title": "Alumni Business Meet Partner",
+        "name": "Dimensions",
+        "imgname": "SponsorsImg/dimensions"
+    },
+    {
+        "id": 7,
+        "title": "Campus Decoration Partner",
+        "name": "DMP Nirman",
+        "imgname": "SponsorsImg/dmp"
+    },
+    {
+        "id": 8,
+        "title": "Exhibition Partner",
+        "name": "Oropise solutions",
+        "imgname": "SponsorsImg/oropise"
+    }
+]

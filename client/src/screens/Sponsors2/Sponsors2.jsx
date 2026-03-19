@@ -2,6 +2,7 @@ import Button from "../../components/Button/Button";
 import WhySponsorBento from "../../components/WhySponsorBento/WhySponsorBento";
 import "./Sponsors2.css";
 import spdata from "../../assets/data/pastSponsors.json";
+import currentSponsors from "../../assets/data/currentSponsors.json";
 import SponsorsMarquee from "../../components/SponsorsMarquee/SponsorsMarquee";
 import SponsorsCategory from "../../components/SponsorCat/SponsorCat";
 
@@ -29,6 +30,22 @@ const Sponsors2 = () => {
                     <img src="/assets/imgs/sponsorship/backdrop-start.png" />
                 </div>
             </section>
+            <section className="current-sponsors">
+                <h1>Our Partners</h1>
+                <div className="current-sponsors-grid">
+                    {currentSponsors.map((sponsor) => (
+                        <div key={sponsor.id} className="sponsor-card">
+                            <h3>{sponsor.title}</h3>
+                            <img 
+                                src={`/assets/imgs/sponsorship/${sponsor.imgname}.webp`} 
+                                alt={sponsor.name} 
+                                className="current-sponsor-logo" 
+                            />
+                        </div>
+                    ))}
+                </div>
+            </section>
+
             <section>
                 <h2>Past Sponsors</h2>
                 <SponsorsMarquee items={spdata.slice(0, 12)} direction="left" />
