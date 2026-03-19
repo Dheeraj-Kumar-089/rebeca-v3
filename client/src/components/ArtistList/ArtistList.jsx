@@ -16,36 +16,6 @@ const ArtistList = ({ artists = [] }) => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down("md")); 
 
-    useLayoutEffect(() => {
-        // 2. Prevent GSAP from running if there are no artists OR if it's a mobile screen
-        if (!artists || artists.length === 0 || isMobile) return;
-
-        let ctx = gsap.context(() => {
-            gsap.to(middleColumnRef.current, {
-                yPercent: -20, 
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: 1,
-                }
-            });
-
-        }, containerRef);
-
-        // THE FIX: Force GSAP to recalculate after a short delay
-        // This gives the browser time to render the image dimensions
-        const timer = setTimeout(() => {
-            ScrollTrigger.refresh();
-        }, 1000);
-
-        return () => {
-            clearTimeout(timer); // Clean up the timer
-            ctx.revert(); 
-        };
-    }, [artists, isMobile]); // Added isMobile to the dependency array
-
     if (!artists || artists.length === 0) return null;
 
     // 3. Render plain layout for mobile/tablets
@@ -58,7 +28,6 @@ const ArtistList = ({ artists = [] }) => {
                     justifyContent: "center", 
                     alignItems: "center", 
                     gap: 1, 
-                    mt: 5, 
                     maxWidth: 1200,
                     mx: "auto",
                     px: 1 // Added a little padding for mobile screens
@@ -92,19 +61,19 @@ const ArtistList = ({ artists = [] }) => {
                 py: 5 
             }}
         >
-            <Box ref={leftColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1, mt: -5 }}>
+            <Box ref={leftColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1 }}>
                 {columns[0].map((artist, index) => (
                     <ArtistCard key={`col1-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
             </Box>
 
-            <Box ref={middleColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1, mt: 25 }}>
+            <Box ref={middleColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1 }}>
                 {columns[1].map((artist, index) => (
                     <ArtistCard key={`col2-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
             </Box>
 
-            <Box ref={rightColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1, mt: -5 }}>
+            <Box ref={rightColumnRef} sx={{ display: "flex", flexDirection: "column", gap: 2, flex: 1 }}>
                 {columns[2].map((artist, index) => (
                     <ArtistCard key={`col3-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
