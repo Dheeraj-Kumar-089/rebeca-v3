@@ -5,6 +5,7 @@ import CollageHeart from "../../components/CollageHeart/CollageHeart";
 import Hero from "../../components/ScrollFancy/Hero";
 import CountDown from "../../components/CountDown/CountDown";
 import Schedule from "../Schedule_new/Schedule"
+import { Typography } from "@mui/material";
 
 const artists = [
     { name: "Amit Mishra", img: "AmitMishra.png" },
@@ -49,7 +50,8 @@ const Home = () => {
                 </p>
             </section>
             <section className="section-4 ">
-                <Heading title={"ARTISTS"} />
+                <Typography variant="h1" sx={{fontFamily: 'var(--heading-font)'}}>Upcoming Artists</Typography>
+                <Typography variant="caption" sx={{fontFamily: 'var(--display-font)', color: 'var(--accent1)', fontSize: '1.6rem'}}>Feeling the thrill already?</Typography>
                 <p>
                     Honoring the visionary creators and legendary performers whose timeless artistry paved the way for the vibrant, evolving culture we celebrate today.
                 </p>
@@ -64,7 +66,7 @@ const Home = () => {
                 <h4>That last a lifetime</h4>
                 <CollageHeart />
             </section>
-            <CountDown />
+            {/* <CountDown /> */}
         </div>
     );
 };

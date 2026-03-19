@@ -1,0 +1,17 @@
+.artistcard {
+    width: 300px;
+    aspect-ratio: 4/4.5;
+    overflow: hidden;
+    background-color: red;
+    border-radius: 7px;
+}
+
+.artistcard img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.artistcard:hover img {
+    transform: scale(1.2);
+    cursor: pointer;
+}  
