@@ -4,7 +4,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
 import RoundCard from "./RoundCard";
 import { Alert, ButtonGroup, Button, Chip } from "@mui/material";
-import { CheckCircleRounded, Tag, Warning } from "@mui/icons-material";
+import { CheckCircleRounded, DisabledByDefault, DisabledByDefaultRounded, Tag, Warning, WarningAmberRounded, WrongLocationRounded } from "@mui/icons-material";
 import CustomAvatar from "../../components/CustomAvatar/CustomAvatar";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import GavelIcon from "@mui/icons-material/Gavel";
@@ -96,21 +96,26 @@ const EventSingle = () => {
                             <h1 className="event-single-title">{oneEvent?.name}</h1>
                             {oneEvent?.type !== "performance" && (
                                 <ButtonGroup variant="contained" size="large">
-                                    {userRegs.some(reg => reg.event === eventSlug) ? (
-                                        <Button
-                                            startIcon={<CheckCircleRounded />}
-                                            color="success"
-                                            disableElevation
-                                            disableRipple
-                                            disableFocusRipple
-                                        >
-                                            Registered
+                                    {oneEvent?.registration === 'closed' ? (
+                                        <Button startIcon={<WarningAmberRounded />} disabled>
+                                            registration closed
                                         </Button>
-                                    ) : (
-                                        <Button startIcon={<Person2Rounded />} onClick={() => navigate("register")}>
-                                            Register
-                                        </Button>
-                                    )}
+                                    ) :
+                                        (userRegs.some(reg => reg.event === eventSlug) ? (
+                                            <Button
+                                                startIcon={<CheckCircleRounded />}
+                                                color="success"
+                                                disableElevation
+                                                disableRipple
+                                                disableFocusRipple
+                                            >
+                                                Registered
+                                            </Button>
+                                        ) : (
+                                            <Button startIcon={<Person2Rounded />} onClick={() => navigate("register")}>
+                                                Register
+                                            </Button>
+                                        ))}
                                     {oneEvent?.rulesdoc && (
                                         <Button
                                             endIcon={<GavelIcon />}

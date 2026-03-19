@@ -174,7 +174,7 @@
     "minTeamSize": 1,
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
-    "regfee":99 ,
+    "regfee": 99,
     "poster": "/posters/flying_solo.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
@@ -202,8 +202,7 @@
         "phone": "+91 62960 29979"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Oxford Style DEBATE",
@@ -241,8 +240,7 @@
         "phone": "6290266229"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Dumb Charades",
@@ -288,8 +286,7 @@
         "phone": "+91 86498 09402"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Mono Act",
@@ -327,8 +324,7 @@
         "phone": "9939950009"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "RXB",
@@ -390,8 +386,7 @@
       }
     ],
     "coords": [],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Artist Band",
@@ -494,7 +489,7 @@
   },
   {
     "name": "Rang Manch",
-"desc": "The lights hum softly. A hush settles in. A voice rises — and suddenly, the world shifts. A room becomes a courtroom. A garden becomes a battlefield of dreams. Emotions thicken, tensions rise, and the ordinary dissolves into something extraordinary.\n\nThis is Rangmanch — the heartbeat of theatre by LES THESPIANS, where stories aren’t just performed, they are lived. A celebration of bold storytelling and powerful expression, this year it brings two compelling worlds to life — one in Hindi and one in Bengali — each ready to move and mesmerize.\n\nThe Two Acts :\n\nKhamosh Adalat Jari Hai\nFrom the bold imagination of Vijay Tendulkar, what begins as a light-hearted courtroom game slowly tightens into something far more unsettling. Smiles fade, questions sharpen, and the air grows heavy — leaving you to wonder who is really on trial.\n\nSajano Bagan\nWritten by the acclaimed Manoj Mitra, this moving drama unveils fragile dreams and unspoken desires, revealing how carefully arranged lives can conceal deep emotional storms.",
+    "desc": "The lights hum softly. A hush settles in. A voice rises — and suddenly, the world shifts. A room becomes a courtroom. A garden becomes a battlefield of dreams. Emotions thicken, tensions rise, and the ordinary dissolves into something extraordinary.\n\nThis is Rangmanch — the heartbeat of theatre by LES THESPIANS, where stories aren’t just performed, they are lived. A celebration of bold storytelling and powerful expression, this year it brings two compelling worlds to life — one in Hindi and one in Bengali — each ready to move and mesmerize.\n\nThe Two Acts :\n\nKhamosh Adalat Jari Hai\nFrom the bold imagination of Vijay Tendulkar, what begins as a light-hearted courtroom game slowly tightens into something far more unsettling. Smiles fade, questions sharpen, and the air grows heavy — leaving you to wonder who is really on trial.\n\nSajano Bagan\nWritten by the acclaimed Manoj Mitra, this moving drama unveils fragile dreams and unspoken desires, revealing how carefully arranged lives can conceal deep emotional storms.",
     "slug": "rang-manch",
     "type": "performance",
     "minTeamSize": 1,
@@ -528,8 +523,7 @@
         "phone": "8789916399"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Footloose",
@@ -567,8 +561,7 @@
         "phone": "7396 658 079"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Rockbuzz",
@@ -577,7 +570,7 @@
     "type": "team",
     "minTeamSize": 3,
     "maxTeamSize": 8,
-    "registration": "https://example.com/register",
+    "registration": "closed",
     "regfee": 699,
     "poster": "/posters/rockbuzz.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
@@ -596,7 +589,7 @@
       {
         "no": 2,
         "name": "Final Round. ",
-        "desc": "The bands who qualify the Preliminary Round will be invited to perform live on the stage of REBECA 85 on Day 3 Kolkata Night between 18:00 to 22:00 for the Finals Round. " ,
+        "desc": "The bands who qualify the Preliminary Round will be invited to perform live on the stage of REBECA 85 on Day 3 Kolkata Night between 18:00 to 22:00 for the Finals Round. ",
         "start": "Day 3 18:00",
         "end": "Day 3 20:00",
         "venue": "Main Stage"
@@ -614,8 +607,7 @@
         "phone": "+91 7384928393"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Main Band",
@@ -641,10 +633,8 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": [
-    ],
-    "prizemoney": {
-    }
+    "coords": [],
+    "prizemoney": {}
   },
   {
     "name": "Artist",
@@ -668,8 +658,7 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": [
-    ],
+    "coords": [],
     "prizemoney": {}
   },
   {
@@ -694,8 +683,7 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": [
-    ],
+    "coords": [],
     "prizemoney": {}
   },
   {
@@ -742,8 +730,7 @@
         "phone": "734 888 9994"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Sync Showcase",
@@ -751,7 +738,7 @@
     "slug": "sync-showcase",
     "type": "team",
     "minTeamSize": 5,
-    "maxTeamSize":20,
+    "maxTeamSize": 20,
     "registration": "https://example.com/register",
     "regfee": 200,
     "poster": "/posters/showcase.webp",
@@ -781,8 +768,7 @@
         "phone": "734 888 9994"
       }
     ],
-    "prizemoney": {
-    }
+    "prizemoney": {}
   },
   {
     "name": "Verse Wars",
@@ -831,7 +817,7 @@
     "maxTeamSize": 3,
     "registration": "https://example.com/register",
     "regfee": 100,
-    "poster": "https://placehold.co/600x400.jpg",
+    "poster": "/posters/rebequiz.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
     "thumbnail": "/assets/imgs/thumbnails/rebequiz.webp",
     "asset": "",
@@ -884,7 +870,8 @@
         "venue": "Main Stage"
       }
     ],
-    "coords": [{
+    "coords": [
+      {
         "name": "Sanskriti Ray ",
         "email": "",
         "phone": "9641820932"
@@ -893,7 +880,8 @@
         "name": "Shruti kumari",
         "email": "",
         "phone": "8235066688"
-      }],
+      }
+    ],
     "prizemoney": {}
   },
   {
@@ -1011,11 +999,11 @@
     "maxTeamSize": 1,
     "registration": "https://example.com/register",
     "regfee": 75,
-    "poster": "https://placehold.co/600x400.jpg",
+    "poster": "/posters/pixel.webp",
     "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
     "thumbnail": "https://placehold.co/150x150.jpg",
     "asset": "",
-      "startTime": "2026-03-19T14:00:00",
+    "startTime": "2026-03-19T14:00:00",
     "rounds": [
       {
         "no": 1,
@@ -1049,353 +1037,353 @@
     "prizemoney": {}
   },
   {
-  "name": "Rebecsal",
-  "desc": "7-side Football Knockout Tournament.",
-  "slug": "football-club",
-  "type": "team",
-  "minTeamSize": 7,
-  "maxTeamSize": 10,
-  "registration": "https://example.com/register",
-  "regfee": 400,
-  "poster": "/posters/rebecsal.webp",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-19T16:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Rebecsal",
-      "desc": "7-side football knockout match as per tournament bracket. Other information attached in the rulebook.",
-      "start": "4:00 PM",
-      "end": "",
-      "venue": "The Oval"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Ansh Pradhan",
-      "email": "2023ceb084.ansh@students.iiests.ac.in",
-      "phone": "9827482977"
-    },
-    {
-      "name": "Sayan Paul",
-      "email": "2023mmb010.sayan@students.iiests.ac.in",
-      "phone": "7003495654"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Reel on Rebeca",
-  "desc": "Camerabuff, the Film Society of IIEST Shibpur, presents the “Reel on REBECA” competition as part of REBECA 2026. This event invites students to showcase their creativity through short-form reel videos. Capture the energy, emotions, and unforgettable moments of REBECA. Highlight performances, behind-the-scenes fun, and the vibrant fest spirit. Turn your vision into a cinematic story and let your lens speak. 🎬✨",
-  "slug": "reel-on-rebeca",
-  "type": "team",
-  "minTeamSize": 1,
-  "maxTeamSize": 3,
-  "registration": "https://example.com/register",
-  "regfee": 150,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-19T16:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Reel Submission",
-      "desc": "Participants must create and submit a short-form reel capturing the spirit of REBECA. The competition starts on Thursday and submissions close on Sunday.",
-      "start": "Thursday 4 PM",
-      "end": "Sunday (Submission Deadline)",
-      "venue": "Online"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Eepuri Srikavya",
-      "email": "2024eeb047.eepuri@students.iiests.ac.in",
-      "phone": "9063561164"
-    },
-    {
-      "name": "Bheemarasetty Hemani",
-      "email": "2024meb042.bheemarasetty@students.iiests.ac.in",
-      "phone": "7893832251"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Rescenic",
-  "desc": "Rescenic is a Movie Scene Recreation event organized by Camerabuff, where participants recreate iconic scenes from films with their own creative interpretation. Teams will bring cinematic moments to life through acting, direction, and presentation.",
-  "slug": "rescenic",
-  "type": "single",
-  "minTeamSize": 1,
-  "maxTeamSize": 1,
-  "registration": "https://example.com/register",
-  "regfee": 200,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-19T18:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Movie Scene Recreation",
-      "desc": "Teams will recreate a selected movie scene and present it before the judges. Creativity, acting, and fidelity to the original scene will be considered in the evaluation.",
-      "start": "19 March 2026 6:00 PM",
-      "end": "",
-      "venue": "IIEST Shibpur"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Aykchat Kalita",
-      "email": "aykchatkalita@gmail.com",
-      "phone": "6001011665"
-    },
-    {
-      "name": "Karan Mandal",
-      "email": "mandalkaran024@gmail.com",
-      "phone": "6289021250"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Typist Tourney",
-  "desc": "Get ready to compete in an electrifying offline keyboard typing speed test hosted on the MonkeyType platform. Race against time to achieve the fastest and most accurate typing score. Whether you’re a seasoned typist or just looking for a fun challenge, this event promises an adrenaline-fueled experience. Sharpen your reflexes, unleash your speed, and claim the title of the fastest typist!",
-  "slug": "typist-tourney",
-  "type": "single",
-  "minTeamSize": 1,
-  "maxTeamSize": 1,
-  "registration": "https://example.com/register",
-  "regfee": 0,
-  "poster": "/posters/typisttourney.webp",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-19T19:30:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Qualifiers",
-      "desc": "Qualifier round for Typist Tourney Finals. Participants will compete in a typing speed challenge on the MonkeyType platform.",
-      "start": "19 March 2026 7:30 PM",
-      "end": "19 March 2026 9:00 PM",
-      "venue": "Parade Ground Stall"
-    },
-    {
-      "no": 2,
-      "name": "Finals",
-      "desc": "Top 10 finalists from Round 1 will compete in the final typing speed challenge to determine the fastest typist.",
-      "start": "20 March 2026 8:00 PM",
-      "end": "20 March 2026 9:00 PM",
-      "venue": "Parade Ground Stall"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Yasharth Shukla",
-      "email": "2023csb107.yasharth@students.iiests.ac.in",
-      "phone": "9161264689"
-    },
-    {
-      "name": "Vaibhav Singh",
-      "email": "2023csb050.vaibhav@students.iiests.ac.in",
-      "phone": "9458146567"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "WhatIf - Poster Re-Designing Contest",
-  "desc": "Camerabuff – The Film Society of IIEST Shibpur presents “What If” — a creative poster redesign challenge where nostalgia meets modern artistry. Reimagine any retro film (any language) with a bold, contemporary twist. Keep its soul, change the vibe, and redefine its look. Let your creativity rewrite cinematic history.",
-  "slug": "whatif-poster-redesigning-contest",
-  "type": "single",
-  "minTeamSize": 1,
-  "maxTeamSize": 1,
-  "registration": "https://example.com/register",
-  "regfee": 150,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-19T10:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Poster Submission",
-      "desc": "Participants must register through the official REBECA website and complete the payment. The WhatsApp group link will be shared and participants will be added for further updates. Participants must redesign a poster of any retro film (any language) in a modern style while retaining its core essence. Only one original entry is allowed (AI strictly prohibited). The submission must be in JPEG/PNG format with a 4:5 ratio along with the editable design link via the provided Google Form.",
-      "start": "19 March 2026",
-      "end": "22 March 2026 6:00 PM",
-      "venue": "Online"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Jannat Parvin",
-      "email": "jannatparvin205@gmail.com",
-      "phone": "9832184930"
-    },
-    {
-      "name": "Tarun Chowdary Yegi",
-      "email": "yegi.2992@gmail.com",
-      "phone": "8247832809"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Photowalk",
-  "desc": "Photowalk is a casual photography activity organized by Catharsis where participants will visit a location together and capture photographs, mainly focusing on street photography. This is not a competition but an opportunity for photography enthusiasts to explore, practice, and enjoy capturing moments.",
-  "slug": "photowalk",
-  "type": "single",
-  "minTeamSize": 1,
-  "maxTeamSize": 1,
-  "registration": "https://example.com/register",
-  "regfee": 50,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-16T06:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Photowalk",
-      "desc": "Participants will gather and visit a selected location to capture photographs, primarily focusing on street photography. This is not a competitive event.",
-      "start": "16 March 2026 6:00 AM",
-      "end": "",
-      "venue": "To Be Announced"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Soumyaditya Mandal",
-      "email": "2023meb014.soumyaditya@students.iiests.ac.in",
-      "phone": "7797754924"
-    },
-    {
-      "name": "Sandip Kumar Das",
-      "email": "2023eeb030.sandip@students.iiests.ac.in",
-      "phone": "7603898592"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Photography Workshop",
-  "desc": "It will be a photography workshop organized by Catharsis where participants can learn photography techniques and interact with the artist. The session will focus on improving practical skills, understanding composition, and exploring creative photography approaches.",
-  "slug": "photography-workshop",
-  "type": "Performance",
-  "minTeamSize": 60,
-  "maxTeamSize": 100,
-  "registration": "https://example.com/register",
-  "regfee": 0,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-16T16:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Workshop Session",
-      "desc": "It will be a photography workshop consisting of the audience and the artist, focusing on learning photography techniques and interaction.",
-      "start": "16 March 2026 4:00 PM",
-      "end": "",
-      "venue": "IIEST Shibpur"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Harsh Gautam",
-      "email": "2023ceb046.harsh@students.iiests.ac.in",
-      "phone": "9761312100"
-    },
-    {
-      "name": "Soumyaditya Mandal",
-      "email": "2023meb014.soumyaditya@students.iiests.ac.in",
-      "phone": "7797754924"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Saturnalia",
-  "desc": "Saturnalia is a photography exhibition organized by Catharsis where selected photographs from participants will be showcased in a curated exhibition format. Participants can submit their best captures, and selected photographs will be printed and displayed in framed format during the exhibition.",
-  "slug": "saturnalia",
-  "type": "Performance",
-  "minTeamSize": 1,
-  "maxTeamSize": 1,
-  "registration": "https://example.com/register",
-  "regfee": 0,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-19T10:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Photography Exhibition",
-      "desc": "Display of selected photographs in printed frames. Participants can submit their best captures for selection. Selected photographs will be printed and displayed in an exhibition format. Submission deadline: 18 March 2026.",
-      "start": "19 March 2026",
-      "end": "22 March 2026",
-      "venue": "IIEST Shibpur"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Sandip Kumar Das",
-      "email": "2023eeb030.sandip@students.iiests.ac.in",
-      "phone": "7063898592"
-    },
-    {
-      "name": "Anamika Singh",
-      "email": "2023csb030.anamika@students.iiests.ac.in",
-      "phone": "9932692869"
-    }
-  ],
-  "prizemoney": {}
-},
-{
-  "name": "Shutter Sprint",
-  "desc": "Shutter Sprint is a photography challenge organized by Catharsis - The Photography Society of IIEST, Shibpur. Participants will receive blurred photos one by one and must guess where the photograph was taken. Teams must then go to that location, recreate the same frame from the same perspective, and submit the photo to the organizer along with a selfie of the entire group at that spot.",
-  "slug": "shutter-sprint",
-  "type": "team",
-  "minTeamSize": 2,
-  "maxTeamSize": 3,
-  "registration": "https://example.com/register",
-  "regfee": 0,
-  "poster": "https://placehold.co/600x400.jpg",
-  "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
-  "thumbnail": "https://placehold.co/150x150.jpg",
-  "asset": "",
-  "startTime": "2026-03-20T15:00:00",
-  "rounds": [
-    {
-      "no": 1,
-      "name": "Shutter Sprint Challenge",
-      "desc": "Participants will be given blurred photographs and must identify the location, recreate the same frame from the same perspective, and submit the photo along with a group selfie at the spot.",
-      "start": "20 March 2026 3:00 PM",
-      "end": "20 March 2026 6:00 PM",
-      "venue": "IIEST Shibpur Campus"
-    }
-  ],
-  "coords": [
-    {
-      "name": "Nikhil Kumar",
-      "email": "nikhil608855@gmail.com",
-      "phone": "7858010472"
-    },
-    {
-      "name": "Harsh Kamal",
-      "email": "",
-      "phone": "9875648449"
-    }
-  ],
-  "prizemoney": {}
-}
+    "name": "Rebecsal",
+    "desc": "7-side Football Knockout Tournament.",
+    "slug": "football-club",
+    "type": "team",
+    "minTeamSize": 7,
+    "maxTeamSize": 10,
+    "registration": "https://example.com/register",
+    "regfee": 400,
+    "poster": "/posters/rebecsal.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-19T16:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Rebecsal",
+        "desc": "7-side football knockout match as per tournament bracket. Other information attached in the rulebook.",
+        "start": "4:00 PM",
+        "end": "",
+        "venue": "The Oval"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Ansh Pradhan",
+        "email": "2023ceb084.ansh@students.iiests.ac.in",
+        "phone": "9827482977"
+      },
+      {
+        "name": "Sayan Paul",
+        "email": "2023mmb010.sayan@students.iiests.ac.in",
+        "phone": "7003495654"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Reel on Rebeca",
+    "desc": "Camerabuff, the Film Society of IIEST Shibpur, presents the “Reel on REBECA” competition as part of REBECA 2026. This event invites students to showcase their creativity through short-form reel videos. Capture the energy, emotions, and unforgettable moments of REBECA. Highlight performances, behind-the-scenes fun, and the vibrant fest spirit. Turn your vision into a cinematic story and let your lens speak. 🎬✨",
+    "slug": "reel-on-rebeca",
+    "type": "team",
+    "minTeamSize": 1,
+    "maxTeamSize": 3,
+    "registration": "https://example.com/register",
+    "regfee": 150,
+    "poster": "/posters/reel.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-19T16:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Reel Submission",
+        "desc": "Participants must create and submit a short-form reel capturing the spirit of REBECA. The competition starts on Thursday and submissions close on Sunday.",
+        "start": "Thursday 4 PM",
+        "end": "Sunday (Submission Deadline)",
+        "venue": "Online"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Eepuri Srikavya",
+        "email": "2024eeb047.eepuri@students.iiests.ac.in",
+        "phone": "9063561164"
+      },
+      {
+        "name": "Bheemarasetty Hemani",
+        "email": "2024meb042.bheemarasetty@students.iiests.ac.in",
+        "phone": "7893832251"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Rescenic",
+    "desc": "Rescenic is a Movie Scene Recreation event organized by Camerabuff, where participants recreate iconic scenes from films with their own creative interpretation. Teams will bring cinematic moments to life through acting, direction, and presentation.",
+    "slug": "rescenic",
+    "type": "single",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
+    "registration": "https://example.com/register",
+    "regfee": 200,
+    "poster": "/posters/rescenic.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-19T18:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Movie Scene Recreation",
+        "desc": "Teams will recreate a selected movie scene and present it before the judges. Creativity, acting, and fidelity to the original scene will be considered in the evaluation.",
+        "start": "19 March 2026 6:00 PM",
+        "end": "",
+        "venue": "IIEST Shibpur"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Aykchat Kalita",
+        "email": "aykchatkalita@gmail.com",
+        "phone": "6001011665"
+      },
+      {
+        "name": "Karan Mandal",
+        "email": "mandalkaran024@gmail.com",
+        "phone": "6289021250"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Typist Tourney",
+    "desc": "Get ready to compete in an electrifying offline keyboard typing speed test hosted on the MonkeyType platform. Race against time to achieve the fastest and most accurate typing score. Whether you’re a seasoned typist or just looking for a fun challenge, this event promises an adrenaline-fueled experience. Sharpen your reflexes, unleash your speed, and claim the title of the fastest typist!",
+    "slug": "typist-tourney",
+    "type": "single",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
+    "registration": "https://example.com/register",
+    "regfee": 0,
+    "poster": "/posters/typisttourney.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-19T19:30:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Qualifiers",
+        "desc": "Qualifier round for Typist Tourney Finals. Participants will compete in a typing speed challenge on the MonkeyType platform.",
+        "start": "19 March 2026 7:30 PM",
+        "end": "19 March 2026 9:00 PM",
+        "venue": "Parade Ground Stall"
+      },
+      {
+        "no": 2,
+        "name": "Finals",
+        "desc": "Top 10 finalists from Round 1 will compete in the final typing speed challenge to determine the fastest typist.",
+        "start": "20 March 2026 8:00 PM",
+        "end": "20 March 2026 9:00 PM",
+        "venue": "Parade Ground Stall"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Yasharth Shukla",
+        "email": "2023csb107.yasharth@students.iiests.ac.in",
+        "phone": "9161264689"
+      },
+      {
+        "name": "Vaibhav Singh",
+        "email": "2023csb050.vaibhav@students.iiests.ac.in",
+        "phone": "9458146567"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "WhatIf - Poster Re-Designing Contest",
+    "desc": "Camerabuff – The Film Society of IIEST Shibpur presents “What If” — a creative poster redesign challenge where nostalgia meets modern artistry. Reimagine any retro film (any language) with a bold, contemporary twist. Keep its soul, change the vibe, and redefine its look. Let your creativity rewrite cinematic history.",
+    "slug": "whatif-poster-redesigning-contest",
+    "type": "single",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
+    "registration": "https://example.com/register",
+    "regfee": 150,
+    "poster": "/posters/whatif.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-19T10:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Poster Submission",
+        "desc": "Participants must register through the official REBECA website and complete the payment. The WhatsApp group link will be shared and participants will be added for further updates. Participants must redesign a poster of any retro film (any language) in a modern style while retaining its core essence. Only one original entry is allowed (AI strictly prohibited). The submission must be in JPEG/PNG format with a 4:5 ratio along with the editable design link via the provided Google Form.",
+        "start": "19 March 2026",
+        "end": "22 March 2026 6:00 PM",
+        "venue": "Online"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Jannat Parvin",
+        "email": "jannatparvin205@gmail.com",
+        "phone": "9832184930"
+      },
+      {
+        "name": "Tarun Chowdary Yegi",
+        "email": "yegi.2992@gmail.com",
+        "phone": "8247832809"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Photowalk",
+    "desc": "Photowalk is a casual photography activity organized by Catharsis where participants will visit a location together and capture photographs, mainly focusing on street photography. This is not a competition but an opportunity for photography enthusiasts to explore, practice, and enjoy capturing moments.",
+    "slug": "photowalk",
+    "type": "single",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
+    "registration": "https://example.com/register",
+    "regfee": 50,
+    "poster": "/posters/photowalk.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-16T06:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Photowalk",
+        "desc": "Participants will gather and visit a selected location to capture photographs, primarily focusing on street photography. This is not a competitive event.",
+        "start": "16 March 2026 6:00 AM",
+        "end": "",
+        "venue": "To Be Announced"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Soumyaditya Mandal",
+        "email": "2023meb014.soumyaditya@students.iiests.ac.in",
+        "phone": "7797754924"
+      },
+      {
+        "name": "Sandip Kumar Das",
+        "email": "2023eeb030.sandip@students.iiests.ac.in",
+        "phone": "7603898592"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Photography Workshop",
+    "desc": "It will be a photography workshop organized by Catharsis where participants can learn photography techniques and interact with the artist. The session will focus on improving practical skills, understanding composition, and exploring creative photography approaches.",
+    "slug": "photography-workshop",
+    "type": "Performance",
+    "minTeamSize": 60,
+    "maxTeamSize": 100,
+    "registration": "https://example.com/register",
+    "regfee": 0,
+    "poster": "/posters/photographyworkshop.webp",
+    "rulesdoc": "",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-16T16:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Workshop Session",
+        "desc": "It will be a photography workshop consisting of the audience and the artist, focusing on learning photography techniques and interaction.",
+        "start": "16 March 2026 4:00 PM",
+        "end": "",
+        "venue": "IIEST Shibpur"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Harsh Gautam",
+        "email": "2023ceb046.harsh@students.iiests.ac.in",
+        "phone": "9761312100"
+      },
+      {
+        "name": "Soumyaditya Mandal",
+        "email": "2023meb014.soumyaditya@students.iiests.ac.in",
+        "phone": "7797754924"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Saturnalia",
+    "desc": "Saturnalia is a photography exhibition organized by Catharsis where selected photographs from participants will be showcased in a curated exhibition format. Participants can submit their best captures, and selected photographs will be printed and displayed in framed format during the exhibition.",
+    "slug": "saturnalia",
+    "type": "Performance",
+    "minTeamSize": 1,
+    "maxTeamSize": 1,
+    "registration": "https://example.com/register",
+    "regfee": 0,
+    "poster": "/posters/saturnalia.webp",
+    "rulesdoc": "",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-19T10:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Photography Exhibition",
+        "desc": "Display of selected photographs in printed frames. Participants can submit their best captures for selection. Selected photographs will be printed and displayed in an exhibition format. Submission deadline: 18 March 2026.",
+        "start": "19 March 2026",
+        "end": "22 March 2026",
+        "venue": "IIEST Shibpur"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Sandip Kumar Das",
+        "email": "2023eeb030.sandip@students.iiests.ac.in",
+        "phone": "7063898592"
+      },
+      {
+        "name": "Anamika Singh",
+        "email": "2023csb030.anamika@students.iiests.ac.in",
+        "phone": "9932692869"
+      }
+    ],
+    "prizemoney": {}
+  },
+  {
+    "name": "Shutter Sprint",
+    "desc": "Shutter Sprint is a photography challenge organized by Catharsis - The Photography Society of IIEST, Shibpur. Participants will receive blurred photos one by one and must guess where the photograph was taken. Teams must then go to that location, recreate the same frame from the same perspective, and submit the photo to the organizer along with a selfie of the entire group at that spot.",
+    "slug": "shutter-sprint",
+    "type": "team",
+    "minTeamSize": 2,
+    "maxTeamSize": 3,
+    "registration": "https://example.com/register",
+    "regfee": 0,
+    "poster": "/posters/shuttersprint.webp",
+    "rulesdoc": "https://drive.google.com/file/d/1J3rhQg5CXPdkML25fTymkm6VLNj-pEuK/view?usp=sharing",
+    "thumbnail": "https://placehold.co/150x150.jpg",
+    "asset": "",
+    "startTime": "2026-03-20T15:00:00",
+    "rounds": [
+      {
+        "no": 1,
+        "name": "Shutter Sprint Challenge",
+        "desc": "Participants will be given blurred photographs and must identify the location, recreate the same frame from the same perspective, and submit the photo along with a group selfie at the spot.",
+        "start": "20 March 2026 3:00 PM",
+        "end": "20 March 2026 6:00 PM",
+        "venue": "IIEST Shibpur Campus"
+      }
+    ],
+    "coords": [
+      {
+        "name": "Nikhil Kumar",
+        "email": "nikhil608855@gmail.com",
+        "phone": "7858010472"
+      },
+      {
+        "name": "Harsh Kamal",
+        "email": "",
+        "phone": "9875648449"
+      }
+    ],
+    "prizemoney": {}
+  }
 ]
