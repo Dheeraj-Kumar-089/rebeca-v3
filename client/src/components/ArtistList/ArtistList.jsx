@@ -1,4 +1,4 @@
-import React, { useRef, useLayoutEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 import ArtistCard from "../ArtistCard2/ArtistCard";
 import { Box, useTheme, useMediaQuery } from "@mui/material"; // Added MUI hooks
 import { gsap } from "gsap";
@@ -34,7 +34,16 @@ const ArtistList = ({ artists = [] }) => {
 
         }, containerRef);
 
-        return () => ctx.revert(); 
+        // THE FIX: Force GSAP to recalculate after a short delay
+        // This gives the browser time to render the image dimensions
+        const timer = setTimeout(() => {
+            ScrollTrigger.refresh();
+        }, 1000);
+
+        return () => {
+            clearTimeout(timer); // Clean up the timer
+            ctx.revert(); 
+        };
     }, [artists, isMobile]); // Added isMobile to the dependency array
 
     if (!artists || artists.length === 0) return null;
@@ -48,15 +57,15 @@ const ArtistList = ({ artists = [] }) => {
                     flexWrap: "wrap", 
                     justifyContent: "center", 
                     alignItems: "center", 
-                    gap: 2, 
+                    gap: 1, 
                     mt: 5, 
                     maxWidth: 1200,
                     mx: "auto",
-                    px: 2 // Added a little padding for mobile screens
+                    px: 1 // Added a little padding for mobile screens
                 }}
             >
                 {artists.map((artist, index) => (
-                    <ArtistCard key={`mobile-${index}`} name={artist?.name} img={artist?.img} />
+                    <ArtistCard key={`mobile-${index}`} name={artist?.name} img={artist?.img} day={artist?.day} />
                 ))}
             </Box>
         );

@@ -44,7 +44,7 @@ const Home = () => {
                 </p>
             </section>
             <section className="section-4 ">
-                <Typography variant="h1" sx={{fontFamily: 'var(--heading-font)'}}>Upcoming Artists</Typography>
+                <Typography variant="h1" sx={{fontFamily: 'var(--heading-font)', width: '100%', textAlign: 'center', fontSize: '4rem'}}>Upcoming Artists</Typography>
                 <Typography variant="caption" sx={{fontFamily: 'var(--display-font)', color: 'var(--accent1)', fontSize: '1.6rem'}}>Feeling the thrill already?</Typography>
                 <p>
                     Honoring the visionary creators and legendary performers whose timeless artistry paved the way for the vibrant, evolving culture we celebrate today.

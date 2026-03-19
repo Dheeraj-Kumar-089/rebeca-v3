@@ -1,6 +1,7 @@
 .artistcard {
     width: 300px;
-    aspect-ratio: 4/4;
+    height: 300px;
+    aspect-ratio: 1/1;
     overflow: hidden;
     background-color: transparent;
     position: relative;
@@ -32,7 +33,9 @@
 }
 
 .artistcard img {
-    height: 100%;
+    aspect-ratio: 1/1;
+    width: 350px;
+    height: 350px;
     transition: all 0.3s ease;
     object-fit: cover;
     position: absolute;
@@ -55,4 +58,15 @@
 
 .artistcard:hover img {
     transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .artistcard {
+        width: 150px;
+        height: auto;
+    }
+    .artistcard img {
+        width: 100%;
+        height: auto;
+    }
 }
